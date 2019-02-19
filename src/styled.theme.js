@@ -6,7 +6,8 @@ export default {
   ],
   colors: {
     blue: '#07c',
-    lightgray: '#f6f6ff'
+    light: '#B0b0b0',
+    dark: '#636363'
   },
   space: [
     0, 4, 8, 16, 32, 64, 128, 256
@@ -17,6 +18,6 @@ export default {
   },
   shadows: {
     small: '0 0 4px rgba(0, 0, 0, .125)',
-    large: '0 0 24px rgba(0, 0, 0, .125)'
+    large: '0 0 24px rgba(0, 4, 8, .125)'
   }
 }
