@@ -13,6 +13,7 @@ import Search from '../components/Search'
 import SearchContainer from '../components/SearchContainer'
 import Header from '../components/Header'
 import Heading from '../components/Heading'
+import Flag from '../components/Flag'
 
 storiesOf('Components', module)
   .add('logo', () => <Logo />)
@@ -46,4 +47,8 @@ storiesOf('Components', module)
         >
           Batman
         </Heading>
+      </ThemeProvider>))
+    .add('flag', () => (
+      <ThemeProvider theme={theme}>
+        <Flag code='co' />
       </ThemeProvider>))
