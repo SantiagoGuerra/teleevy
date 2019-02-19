@@ -5,7 +5,7 @@ export default {
     12, 14, 16, 20, 24, 32, 48, 64
   ],
   colors: {
-    blue: '#07c',
+    orange: '##FF8721',
     light: '#B0b0b0',
     dark: '#636363'
   },

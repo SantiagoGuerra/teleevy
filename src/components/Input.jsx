@@ -6,10 +6,9 @@ const StyledInput = styled(Box).attrs(() => ({
   as:'input',
   placeholder:'Search your movie'
 }))`
-  height: 20px;
   font-size: 20px;
   color: ${props => props.theme.colors.dark};
-  padding: 20px;
+  padding: 12px;
   border-radius: 4px;
   box-shadow: 0px 1px 2px rgba(0,0,0,.2);
   border: none;
