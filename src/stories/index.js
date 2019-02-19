@@ -16,6 +16,7 @@ import Heading from '../components/Heading'
 import Flag from '../components/Flag'
 import Stars from '../components/Stars'
 import Paragraph from '../components/Paragraph'
+import Tags from '../components/Tags'
 
 storiesOf('Components', module)
   .add('logo', () => <Logo />)
@@ -61,4 +62,8 @@ storiesOf('Components', module)
     .add('paragraph', () => (
       <ThemeProvider theme={theme}>
         <Paragraph>jfl ajkldfj ñlskdj fñlkjsñlkaf ñskljfñ ljslkfñj lksjñflkjdflk sjdfkljdsñkjskjfklsjfkñl jsfkljsklfj sñlkjf klsj fñlksjfñ klsjfkljsflkj ñlaskj jasklfjñ l</Paragraph>
+      </ThemeProvider>))
+    .add('tags', () => (
+      <ThemeProvider theme={theme}>
+        <Tags tags={['horror', 'animation', 'western', 'comic']} />
       </ThemeProvider>))
