@@ -11,6 +11,10 @@ const StyledHeading = styled(Title)`
   & a:hover{
     text-decoration: underline;
   }
+
+  & a span {
+    font-weight: 400;
+  }
 `
 
 const Heading = ({children, date}) => {
@@ -20,7 +24,7 @@ const Heading = ({children, date}) => {
       as='h3'
       fontSize={[16, 20]}
     >
-    <a href='#'>{children} {date}</a>
+    <a href='#'>{children} <span>({date})</span></a>
     </StyledHeading>
   )
 }
