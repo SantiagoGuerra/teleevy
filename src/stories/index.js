@@ -14,6 +14,7 @@ import SearchContainer from '../components/SearchContainer'
 import Header from '../components/Header'
 import Heading from '../components/Heading'
 import Flag from '../components/Flag'
+import Stars from '../components/Stars'
 
 storiesOf('Components', module)
   .add('logo', () => <Logo />)
@@ -51,4 +52,8 @@ storiesOf('Components', module)
     .add('flag', () => (
       <ThemeProvider theme={theme}>
         <Flag code='co' />
+      </ThemeProvider>))
+    .add('stars', () => (
+      <ThemeProvider theme={theme}>
+        <Stars val={9/2} />
       </ThemeProvider>))
