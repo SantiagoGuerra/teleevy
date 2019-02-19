@@ -15,6 +15,7 @@ import Header from '../components/Header'
 import Heading from '../components/Heading'
 import Flag from '../components/Flag'
 import Stars from '../components/Stars'
+import Paragraph from '../components/Paragraph'
 
 storiesOf('Components', module)
   .add('logo', () => <Logo />)
@@ -56,4 +57,8 @@ storiesOf('Components', module)
     .add('stars', () => (
       <ThemeProvider theme={theme}>
         <Stars val={9/2} />
+      </ThemeProvider>))
+    .add('paragraph', () => (
+      <ThemeProvider theme={theme}>
+        <Paragraph>jfl ajkldfj ñlskdj fñlkjsñlkaf ñskljfñ ljslkfñj lksjñflkjdflk sjdfkljdsñkjskjfklsjfkñl jsfkljsklfj sñlkjf klsj fñlksjfñ klsjfkljsflkj ñlaskj jasklfjñ l</Paragraph>
       </ThemeProvider>))
