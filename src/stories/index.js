@@ -9,6 +9,9 @@ import theme from '../styled.theme.js'
 import Logo from '../components/Logo'
 import Input from '../components/Input'
 import SearchButton from '../components/SearchButton'
+import Search from '../components/Search'
+import SearchContainer from '../components/SearchContainer'
+
 
 storiesOf('Components', module)
   .add('logo', () => <Logo />)
@@ -23,3 +26,11 @@ storiesOf('Components', module)
       borderRadius={70}
     >Search</SearchButton>
   </ThemeProvider>))
+   .add('search', () => (
+    <ThemeProvider theme={theme}>
+      <Search />
+    </ThemeProvider>))
+    .add('search container', () => (
+      <ThemeProvider theme={theme}>
+        <SearchContainer />
+      </ThemeProvider>))
