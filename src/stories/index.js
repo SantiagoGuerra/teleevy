@@ -12,6 +12,7 @@ import SearchButton from '../components/SearchButton'
 import Search from '../components/Search'
 import SearchContainer from '../components/SearchContainer'
 import Header from '../components/Header'
+import Heading from '../components/Heading'
 
 storiesOf('Components', module)
   .add('logo', () => <Logo />)
@@ -37,4 +38,12 @@ storiesOf('Components', module)
     .add('header', () => (
       <ThemeProvider theme={theme}>
         <Header/>
+      </ThemeProvider>))
+    .add('heading', () => (
+      <ThemeProvider theme={theme}>
+        <Heading
+          date='1999-2003'
+        >
+          Batman
+        </Heading>
       </ThemeProvider>))
