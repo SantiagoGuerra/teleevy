@@ -11,7 +11,7 @@ import Input from '../components/Input'
 import SearchButton from '../components/SearchButton'
 import Search from '../components/Search'
 import SearchContainer from '../components/SearchContainer'
-
+import Header from '../components/Header'
 
 storiesOf('Components', module)
   .add('logo', () => <Logo />)
@@ -33,4 +33,8 @@ storiesOf('Components', module)
     .add('search container', () => (
       <ThemeProvider theme={theme}>
         <SearchContainer />
+      </ThemeProvider>))
+    .add('header', () => (
+      <ThemeProvider theme={theme}>
+        <Header/>
       </ThemeProvider>))
