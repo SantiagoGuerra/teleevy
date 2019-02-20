@@ -23,7 +23,7 @@ const Tags = ({tags}) => {
               >
               <Text
                 fontSize={[11,12]}
-                p={[1,8]}
+                p={[1]}
               color='#5352ed'              
               >
                 {tag}

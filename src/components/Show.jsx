@@ -22,7 +22,7 @@ const Show = ({
     <Card
       width={[ 1, .6, 1/2 ]}
       p={1}
-      my={5}
+      my={2}
       bg='#f6f6ff'
       borderRadius={8}
       boxShadow='0 2px 16px rgba(0, 0, 0, 0.25)'

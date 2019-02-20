@@ -10,9 +10,9 @@ const StyledInput = styled(Box).attrs(() => ({
   color: ${props => props.theme.colors.dark};
   padding: 8px;
   border-radius: 4px 0px 0px 4px;
-  box-shadow: 0px 1px 2px rgba(0,0,0,.2);
   border: none;
   width: 100%;
+  border: .5px solid #ccc;
 
   ::placeholder {
     color: ${props => props.theme.colors.light};
