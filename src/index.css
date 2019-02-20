@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
 *,
 *::before,
 *::before {
@@ -8,7 +10,7 @@
 }
 
 h1,h2,h3 {
-  font-weight: 400
+  font-weight: 500
 }
 
 body {
