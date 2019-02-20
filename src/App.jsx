@@ -1,6 +1,6 @@
 import React from  'react'
 import {Flex} from 'rebass'
-import Main from './components/Main'
+import MainContainer from './containers/MainContainer'
 
 class App extends React.Component {
 
@@ -8,7 +8,7 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
-        <Main />
+        <MainContainer />
       </React.Fragment>
     )
   }

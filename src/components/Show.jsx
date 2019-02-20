@@ -20,12 +20,14 @@ const Show = ({
 
   return (
     <Card
-      width={[ 1, .6, 1/2 ]}
+      width={[ 1, 1, .7 ]}
       p={1}
       my={2}
       bg='#f6f6ff'
       borderRadius={8}
       boxShadow='0 2px 16px rgba(0, 0, 0, 0.25)'
+
+      style={{maxWidth: '700px'}}
     >
       <Flex
         flexWrap='wrap'

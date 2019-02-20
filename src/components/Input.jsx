@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import {Box} from 'rebass'
 
-const StyledInput = styled(Box).attrs(() => ({
+const StyledInput = styled(Box).attrs((value) => ({
   as:'input',
-  placeholder:'Search Shows'
+  placeholder:'Search Shows',
+  type:'search',
+  value: value
 }))`
   font-size: 16px;
   color: ${props => props.theme.colors.dark};
@@ -29,10 +31,18 @@ const StyledInput = styled(Box).attrs(() => ({
   }
 `
 
-const Input = () => {
+const Input = ({
+  value,
+  handleOnChangeInputValue
+}) => {
 
   return (
-    <StyledInput />
+    <StyledInput value={value} onChange = {
+      e => {
+        let _val = e.target.value
+        handleOnChangeInputValue(_val)
+      }
+    }/>
   )
 }
 

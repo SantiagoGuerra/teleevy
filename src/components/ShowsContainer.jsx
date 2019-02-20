@@ -7,19 +7,48 @@ import Show from './Show'
 import uuid from 'uuid'
 
 
-const ShowsContainer = ({shows}) => {
+const Continue = styled.div`
+  background: rgba(255, 135, 33, 0.3);
+  padding: 20px;
+  margin-top: 32px;
+  color: rgba(255, 135, 33);
+  border: 4px solid rgba(255, 135, 33, 0.3);
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  text-align:center;
+`
+
+const randomRating = () => {
+  let num = (Math.round(Math.random() * 9))
+  return num
+} 
+
+
+const ShowsContainer = ({
+  shows,
+  ui,
+  handleOnChangeInputValue,
+  handleFetchShows
+}) => {
+
   return (
     <React.Fragment>
-      <Header />
+      <Header
+        ui={ui}
+        handleOnChangeInputValue={handleOnChangeInputValue}
+        handleFetchShows={handleFetchShows}
+      />
       <Flex
         flexWrap='wrap'
         justifyContent='center'
         width={[1]}
+        p={16}
       >
 
         {
           (shows.length <= 0)
-            ? 'There are not concidences'
+            ? <Continue>There are not concidences, search another show</Continue>
             : shows.map( show => {
               return (
                 <Box
@@ -30,13 +59,13 @@ const ShowsContainer = ({shows}) => {
                     justifyContent='center'
                   >
                   <Show 
-                     urlImage={show.show.image.original | ''}
+                     urlImage={(show.show.image) ? show.show.image.original : ''}
                      title={show.show.name}
                      date={show.show.premiered}
                      link={show.show.officialSite}
-                     code={'us'}
-                     val={show.show.rating.average}
-                     summary={show.show.summary}
+                     code={(show.show.network) ? show.show.network.country.code : ''}
+                     val={(show.show.rating.average) ? show.show.rating.average : randomRating()}
+                     summary={(show.show.summary) ? show.show.summary : ''}
                      tags={show.show.genres}
                      key={show.show.id}
                   />
