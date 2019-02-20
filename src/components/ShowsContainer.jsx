@@ -6,6 +6,8 @@ import Header from './Header'
 import Show from './Show'
 import uuid from 'uuid'
 
+import Masonry from 'react-masonry-component'
+
 
 const Continue = styled.div`
   background: rgba(255, 135, 33, 0.3);
@@ -41,7 +43,9 @@ const ShowsContainer = ({
         width={[1]}
         p={16}
       >
-
+      <Masonry
+        style={{width: '80%'}}
+      >
         {
           (shows.length <= 0)
             ? <Continue>There are not concidences, search another show</Continue>
@@ -49,11 +53,9 @@ const ShowsContainer = ({
               return (
                 <Box
                   key={uuid.v4()}
-                  width={[1]}
+                  width={[1, 1,320]}
+                  m={[2]}
                 >
-                  <Flex
-                    justifyContent='center'
-                  >
                   <Show 
                      urlImage={(show.show.image) ? show.show.image.original : ''}
                      title={show.show.name}
@@ -61,16 +63,14 @@ const ShowsContainer = ({
                      link={show.show.officialSite}
                      code={(show.show.network) ? show.show.network.country.code : ''}
                      val={(show.show.rating.average) ? show.show.rating.average : 8}
-                     summary={(show.show.summary) ? show.show.summary : ''}
                      tags={show.show.genres}
                      key={show.show.id}
                   />
-                  </Flex>
                 </Box>
               )
             })
         }
-
+      </Masonry>
       </Flex>
     </React.Fragment>
   )

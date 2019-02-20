@@ -33,7 +33,8 @@ const StyledInput = styled(Box).attrs((value) => ({
 
 const Input = ({
   value,
-  handleOnChangeInputValue
+  handleOnChangeInputValue,
+  handleFetchShows
 }) => {
 
   return (
@@ -41,6 +42,7 @@ const Input = ({
       e => {
         let _val = e.target.value
         handleOnChangeInputValue(_val)
+        handleFetchShows(_val)
       }
     }/>
   )

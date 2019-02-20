@@ -41,6 +41,7 @@ const Header = ({
         <Input 
           borderRadius={[4]}
           handleOnChangeInputValue={handleOnChangeInputValue}
+          handleFetchShows={handleFetchShows}
         />
         <SearchButton>Search</SearchButton>
 

@@ -14,64 +14,78 @@ const Show = ({
   link,
   code,
   val,
-  summary,
   tags
 }) => {
 
   return (
     <Card
-      width={[ 1, 1, .7 ]}
+      width={[1]}
       p={1}
-      my={2}
       bg='#f6f6ff'
       borderRadius={8}
       boxShadow='0 2px 16px rgba(0, 0, 0, 0.25)'
 
-      style={{maxWidth: '700px'}}
     >
+    {/* image box and content container */}
       <Flex
         flexWrap='wrap'
+        flexDirection='column'
       >
+
+      {/* image */}
       <Box
-        width={[.3, .3, .2]}
+        width={[1]}
+        alignSelf='center'
       >
         <Image 
         src={urlImage}/>
       </Box>
+
+      {/* content container */}
       <Box
-        width={[.7]}
+        width={[1]}
+        p={[2]}
       >
+
+      {/* title */}
         <Flex
           flexWrap='wrap'
-          p={2}
+          width={[1]}
         >
-          <Box 
+          <Heading 
+            mr={3}
+            date={date}
+            link={link}
+          >
+            {title}
+          </Heading>
+        </Flex>
+          
+          {/* flag */}
+        <Flex>
+        <Box 
+            pt={[2]}
             width={[1]}
             mb={2}
             >
-            <Flex
-              alignItems='center'
-            >
-              <Heading 
-                mr={3}
-                date={date}
-                link={link}
-              >{title}</Heading><Flag code={code} />
-            </Flex>
+              <Flag code={code} />
           </Box>
+        </Flex>
+
+        {/* rating */}
+
+        <Flex>
           <Box 
             mb={2}
           >
             <Stars val={val}/>
           </Box>
-          <Box
-            mb={2}
-          >
-            <Paragraph>
-              {summary}
-            </Paragraph>
-          </Box>
-          <Box
+        </Flex>
+ 
+
+        {/* tags */}
+        <Flex>
+        <Box
           >
             <Tags tags={tags} />
           </Box>
