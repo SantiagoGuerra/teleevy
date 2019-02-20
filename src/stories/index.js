@@ -17,6 +17,7 @@ import Flag from '../components/Flag'
 import Stars from '../components/Stars'
 import Paragraph from '../components/Paragraph'
 import Tags from '../components/Tags'
+import Show from '../components/Show'
 
 storiesOf('Components', module)
   .add('logo', () => <Logo />)
@@ -66,4 +67,16 @@ storiesOf('Components', module)
     .add('tags', () => (
       <ThemeProvider theme={theme}>
         <Tags tags={['horror', 'animation', 'western', 'comic']} />
+      </ThemeProvider>))
+    .add('show', () => (
+      <ThemeProvider theme={theme}>
+        <Show
+        urlImage='http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg'
+        title='Title'
+        date='2016 - 2018'
+        link='https://google.com'
+        code='ar'
+        val={5}
+        summary='<p>This Emmy winning series is a comic look at the assorted humiliations and rare triumphs of a group of girls in their 20s.</p>'
+        tags={['horror', 'animation', 'western', 'comic']} />
       </ThemeProvider>))

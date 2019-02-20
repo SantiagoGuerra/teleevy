@@ -17,14 +17,15 @@ const StyledHeading = styled(Title)`
   }
 `
 
-const Heading = ({children, date}) => {
+const Heading = ({children, date, link, mr}) => {
 
   return (
     <StyledHeading
       as='h3'
       fontSize={[16, 20]}
+      mr={mr}
     >
-    <a href='#'>{children} <span>({date})</span></a>
+    <a href={link}>{children} <span>({date})</span></a>
     </StyledHeading>
   )
 }

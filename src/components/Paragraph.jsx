@@ -8,11 +8,14 @@ const StyledParagraph = styled(Text)`
 
 const Paragraph = ({children}) => {
 
+  let text = children.replace(/<[/]p>/, '')
+  let replace = text.replace(/<p>/, '')
+
   return (
     <StyledParagraph
       fontSize={[12, 16]}
     >
-      {children}
+      {replace}
     </StyledParagraph>
   )
 }

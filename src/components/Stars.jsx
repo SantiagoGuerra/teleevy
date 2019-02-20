@@ -24,14 +24,14 @@ const Stars = ({val}) => {
       <StarContainer
     >
       <Rating 
-    initialRating={val}
+    initialRating={val / 2}
     emptySymbol={<Star src={starEmpty} className="icon" />}
     fullSymbol={<Star src={starFull} className="icon" />}
     readonly
   />
     </StarContainer>
     <Box as='span' mx={[8]} style={{color:'#b0b0b0'}}>
-      {val}
+      {val / 2}
     </Box>
       </Flex>
     </React.Fragment>  
