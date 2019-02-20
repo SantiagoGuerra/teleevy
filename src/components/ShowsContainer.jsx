@@ -19,10 +19,6 @@ const Continue = styled.div`
   text-align:center;
 `
 
-const randomRating = () => {
-  let num = (Math.round(Math.random() * 9))
-  return num
-} 
 
 
 const ShowsContainer = ({
@@ -64,7 +60,7 @@ const ShowsContainer = ({
                      date={show.show.premiered}
                      link={show.show.officialSite}
                      code={(show.show.network) ? show.show.network.country.code : ''}
-                     val={(show.show.rating.average) ? show.show.rating.average : randomRating()}
+                     val={(show.show.rating.average) ? show.show.rating.average : 8}
                      summary={(show.show.summary) ? show.show.summary : ''}
                      tags={show.show.genres}
                      key={show.show.id}
