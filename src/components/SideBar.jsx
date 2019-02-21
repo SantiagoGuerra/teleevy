@@ -9,11 +9,26 @@ import { Slider } from 'react-burgers'
 import Logo from './Logo'
 
 
+const StyledLink = styled.a`
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #636363;
+  padding: 8px;
+  padding-left: 24px;
+  width: 100%;
+
+  &:hover {
+    background: #eee;
+    cursor: pointer;
+  }
+`
+
 const SideBar = ({set, isOpen}) => {
 
   return (
     <Flex
-      width={[.9, 360, 300]}
+      width={[.9, 250 ]}
       flexDirection='column'
     >
     <Flex
@@ -27,7 +42,7 @@ const SideBar = ({set, isOpen}) => {
       >
       <Slider
         color='#FF8721' 
-        width={32}
+        width={16}
         onClick={() => {
           set()
         }}
@@ -42,7 +57,69 @@ const SideBar = ({set, isOpen}) => {
       </Box>
     </Flex>
     <Box>
-      hok
+      <Flex
+        as='nav'
+        width={[1]}
+      >
+        <Flex as='ul'
+          justifyContent='center'
+          style={{listStyle:'none'}}
+          flexDirection='column'
+          width={[1]}
+        >
+          <Flex
+            as='li'
+            mt={[24]}
+            alignItems='center'
+          >
+           <StyledLink>
+           <Box
+              mr={[24]}
+            >
+            <i className="material-icons">trending_up</i>
+            </Box>
+            Trend
+            </StyledLink>
+          </Flex>
+
+                   
+          <Flex
+            as='li'
+            alignItems='center'
+          >
+          <StyledLink>
+          <Box
+              mr={[24]}
+              width={[24]}
+            >
+            <i className="material-icons">star_rate</i>
+            </Box>
+            <Box>
+              Best Rated
+            </Box>  
+          </StyledLink>
+          </Flex>
+
+          <Flex
+            as='li'
+            alignItems='center'
+          >
+          <StyledLink>
+          <Box
+              mr={[24]}
+              width={[24]}
+            >
+            <i className="material-icons">theaters</i>
+            </Box>
+            <Box>
+              New Shows
+            </Box>
+          </StyledLink>
+          </Flex>
+
+
+        </Flex>
+      </Flex>
     </Box>
 
     </Flex>

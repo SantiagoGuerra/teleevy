@@ -14,8 +14,9 @@ const StyledInput = styled(Box).attrs((value) => ({
   border-radius: 4px;
   border:none;
   background: #eee;
-  border-bottom: 3px solid orange;
   width: 100%;
+  border-radius: 24px;
+  padding-left: 24px;
 
   ::placeholder {
     color: ${props => props.theme.colors.light};
@@ -28,7 +29,6 @@ const StyledInput = styled(Box).attrs((value) => ({
 
   @media screen and (min-width: 40em) {
     font-size: 20px;
-    padding: 8px;
   }
 `
 
