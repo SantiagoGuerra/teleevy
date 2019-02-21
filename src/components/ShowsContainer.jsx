@@ -30,7 +30,7 @@ const ShowsContainer = ({
   handleOnChangeInputValue,
   handleFetchShows,
   handleAddModalShow,
-  closeModal
+  closeModal,
   set,
   sidebarIsOpen
 }) => {

@@ -3,6 +3,8 @@ import ShowsContainer from './ShowsContainer';
 import Modal from 'react-responsive-modal';
 import {Card, Heading} from 'rebass'
 import Complete from './Complete'
+import Side from './SideBar'
+
 
 
 const ExpandShow = ({isOpen, modal, closeModal}) => {
@@ -25,7 +27,6 @@ const ExpandShow = ({isOpen, modal, closeModal}) => {
   )
 }
 
-import Side from './SideBar'
 const Main = ({
   ui,
   shows,
