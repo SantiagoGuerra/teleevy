@@ -4,6 +4,7 @@ import {Flex, Box} from 'rebass'
 
 import Header from './Header'
 import Show from './Show'
+import Side from './SideBar'
 import uuid from 'uuid'
 
 import Masonry from 'react-masonry-component'
@@ -30,6 +31,8 @@ const ShowsContainer = ({
   handleFetchShows,
   handleAddModalShow,
   closeModal
+  set,
+  sidebarIsOpen
 }) => {
 
   return (
@@ -38,6 +41,10 @@ const ShowsContainer = ({
         ui={ui}
         handleOnChangeInputValue={handleOnChangeInputValue}
         handleFetchShows={handleFetchShows}
+        set={console.log}
+        isOpen={true}
+        sidebarIsOpen={sidebarIsOpen}
+        set={set}
       />
       <Flex
         flexWrap='wrap'

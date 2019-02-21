@@ -25,6 +25,7 @@ const ExpandShow = ({isOpen, modal, closeModal}) => {
   )
 }
 
+import Side from './SideBar'
 const Main = ({
   ui,
   shows,
@@ -37,9 +38,16 @@ const Main = ({
   closeModal
 }) => { 
 
+    const [isOpen, set] = useState(true)
+
+    const setIsOpen = () => set(!isOpen)
+
     return (
       <React.Fragment>
-
+      <Side
+        isOpen={isOpen}
+        set={setIsOpen}
+      >
       <ShowsContainer
               ui={ui} 
               shows={shows}
@@ -47,12 +55,16 @@ const Main = ({
               handleFetchShows={handleFetchShows}
               handleAddModalShow={handleAddModalShow}
               closeModal={closeModal}
-            />
+              sidebarIsOpen={isOpen}
+              set={setIsOpen}
+            />  
       <ExpandShow 
         isOpen={ui}
         modal={modal}
         closeModal={closeModal}
       />
+            
+      </Side>
       </React.Fragment>
     )
 

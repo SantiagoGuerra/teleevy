@@ -10,11 +10,12 @@ const StyledInput = styled(Box).attrs((value) => ({
 }))`
   font-size: 16px;
   color: ${props => props.theme.colors.dark};
-  padding: 8px;
-  border-radius: 4px 0px 0px 4px;
-  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  border:none;
+  background: #eee;
+  border-bottom: 3px solid orange;
   width: 100%;
-  border: .5px solid #ccc;
 
   ::placeholder {
     color: ${props => props.theme.colors.light};
@@ -27,7 +28,7 @@ const StyledInput = styled(Box).attrs((value) => ({
 
   @media screen and (min-width: 40em) {
     font-size: 20px;
-    padding: 12px;
+    padding: 8px;
   }
 `
 
