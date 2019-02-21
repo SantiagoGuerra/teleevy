@@ -18,6 +18,7 @@ import Stars from '../components/Stars'
 import Paragraph from '../components/Paragraph'
 import Tags from '../components/Tags'
 import Show from '../components/Show'
+import Side from '../components/SideBar'
 
 storiesOf('Components', module)
   .add('logo', () => <Logo />)
@@ -80,3 +81,8 @@ storiesOf('Components', module)
         summary='<p>This Emmy winning series is a comic look at the assorted humiliations and rare triumphs of a group of girls in their 20s.</p>'
         tags={['horror', 'animation', 'western', 'comic']} />
       </ThemeProvider>))
+    .add('Side', () => (
+      <ThemeProvider theme={theme}>
+      <Side />
+      </ThemeProvider>
+    ))

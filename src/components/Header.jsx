@@ -6,6 +6,10 @@ import SearchButton from './SearchButton'
 import Logo from './Logo'
 import Input from './Input'
 
+
+import { Slider } from 'react-burgers'
+
+
 const HeaderContainer = styled(Flex)`
   border-bottom: .5px solid #ccc;
 `
@@ -13,25 +17,32 @@ const HeaderContainer = styled(Flex)`
 const Header = ({
   ui,
   handleOnChangeInputValue,
-  handleFetchShows
+  handleFetchShows,
+  set,
+  sidebarIsOpen
 }) => {
   return (
     <HeaderContainer
       as='header'
       alignItems='center'
-      p={[16, 24]}
+      p={[8]}
       width={[1]}
-    >
-      <Box
-        width={[120]}
-        mx={[16,24]}
-      >
-        <Logo />
-      </Box>
-      <Box
-        width={[.6, .6, .4]}
-      >
+      justifyContent='space-between'
+    >   
+        <Box
+          
+        >
+
+        <Slider 
+          onClick = {() => set()}
+          color='#FF8721' 
+          width={32}
+          style={{margin: '16px'}}
+        />
+        </Box>
         <Flex as='form'
+        width={[.7, .7,.3]}
+        mr={[0, 0, 42]}
           onSubmit={e => {
             e.preventDefault()
             handleFetchShows(ui.inputValue)
@@ -42,10 +53,7 @@ const Header = ({
           borderRadius={[4]}
           handleOnChangeInputValue={handleOnChangeInputValue}
         />
-        <SearchButton>Search</SearchButton>
-
         </Flex>
-      </Box>
     </HeaderContainer>
   )
 }
