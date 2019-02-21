@@ -9,6 +9,16 @@ export const receiveShows = json => ({
   shows: json
 })
 
+export const addModalShow = obj => ({
+  type: 'ADD_MODAL_SHOW',
+  modal: obj
+})
+
+export const modalIsOpen = val => ({
+  type: 'MODAL_IS_OPEN',
+  val
+})
+
 export const fetchShows = val => {
 
   return function(dispatch) {

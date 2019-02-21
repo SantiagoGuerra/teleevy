@@ -7,14 +7,28 @@ import Stars from './Stars'
 import Paragraph from './Paragraph'
 import Tags from './Tags'
 
+const Hoverable = styled.div`
+  transition: transform .3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05,1.05);
+    z-index: 3000;
+    box-shadow: 0px 8px 16px rgb(0,0,0,.3);
+  }
+`
+
 const Show = ({
   urlImage,
   title,
   date,
-  link,
   code,
   val,
-  tags
+  tags,
+  shows,
+  id,
+  handleAddModalShow,
+  closeModal
 }) => {
 
   return (
@@ -24,7 +38,13 @@ const Show = ({
       bg='#f6f6ff'
       borderRadius={8}
       boxShadow='0 2px 16px rgba(0, 0, 0, 0.25)'
+      as={Hoverable}
+      onClick={() => {
+        shows.filter(show => show.show.id === id)
+        .map(show => handleAddModalShow(show))
 
+        closeModal(true)
+      }}
     >
     {/* image box and content container */}
       <Flex
@@ -55,7 +75,6 @@ const Show = ({
           <Heading 
             mr={3}
             date={date}
-            link={link}
           >
             {title}
           </Heading>

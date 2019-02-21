@@ -15,6 +15,10 @@ const StyledHeading = styled(Title)`
   & a span {
     font-weight: 400;
   }
+
+  & p {
+    color: #636363;
+  }
 `
 
 const Heading = ({children, date, link, mr}) => {
@@ -25,7 +29,8 @@ const Heading = ({children, date, link, mr}) => {
       fontSize={[16, 20]}
       mr={mr}
     >
-    <a href={link}>{children} <span>({date})</span></a>
+
+    {link ? <a href={link}>{children} <br/><span>({date})</span></a> : <p> {children} <br/><span>({date})</span></p>}
     </StyledHeading>
   )
 }

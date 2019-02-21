@@ -27,7 +27,9 @@ const ShowsContainer = ({
   shows,
   ui,
   handleOnChangeInputValue,
-  handleFetchShows
+  handleFetchShows,
+  handleAddModalShow,
+  closeModal
 }) => {
 
   return (
@@ -65,6 +67,10 @@ const ShowsContainer = ({
                      val={(show.show.rating.average) ? show.show.rating.average : 8}
                      tags={show.show.genres}
                      key={show.show.id}
+                     shows={shows}
+                     id={show.show.id}
+                     handleAddModalShow={handleAddModalShow}
+                     closeModal={closeModal}
                   />
                 </Box>
               )
