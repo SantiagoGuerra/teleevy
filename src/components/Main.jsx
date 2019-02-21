@@ -39,7 +39,7 @@ const Main = ({
   closeModal
 }) => { 
 
-    const [isOpen, set] = useState(true)
+    const [isOpen, set] = useState(false)
 
     const setIsOpen = () => set(!isOpen)
 
